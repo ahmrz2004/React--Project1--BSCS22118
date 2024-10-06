@@ -23,7 +23,7 @@ const styles = {
     padding: '10px 15px',// Increased padding for better spacing
     backgroundColor: '#FF5A5F',
     color: 'white',
-    width: '97%', // Full-width navbar
+    width: '96%', // Full-width navbar
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
   },
   logo: {
@@ -33,7 +33,7 @@ const styles = {
   navLinks: {
     listStyle: 'none',
     display: 'flex',
-    gap: '30px', // Increased gap for better spacing
+    gap: '20px', // Increased gap for better spacing
   },
   navLink: {
     textDecoration: 'none',
