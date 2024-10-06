@@ -1,21 +1,10 @@
-import Navbar from './Navbar';
-import SearchBar from './SearchBar';
-import Categories from './Categories';
-import Footer from './Footer';
-import ListingCard from './ListingCard';
+import Home from './Home';
+
 
 function App() {
   return (
     <div className="App">
-       <Navbar/>
-       <SearchBar />
-       <Categories/>
-       <ListingCard/>
-       <ListingCard/>
-       <ListingCard/>
-
-       <Footer/>
-       
+       <Home/>
        
     </div>
   );

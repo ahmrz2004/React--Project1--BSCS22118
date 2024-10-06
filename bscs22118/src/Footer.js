@@ -24,28 +24,29 @@ const Footer = () => {
 const styles = {
   footer: {
     padding: '20px',
-    backgroundColor: '#f1f1f1',
+    //backgroundColor: '#fff', // Simple white background
     textAlign: 'center',
+    borderTop: '1px solid #ddd', // Subtle border at the top
   },
   links: {
     marginBottom: '10px',
   },
   link: {
-    margin: '0 10px',
+    margin: '0 15px',
     textDecoration: 'none',
-    color: '#000',
+    color: '#000', // Black text color
   },
   socialMedia: {
     marginBottom: '10px',
   },
   icon: {
-    margin: '0 10px',
+    margin: '0 15px',
     textDecoration: 'none',
-    color: '#000',
+    color: '#000', // Black text color
   },
   copyright: {
     fontSize: '14px',
-    color: '#555',
+    color: '#555', // Gray text for copyright
   },
 };
 

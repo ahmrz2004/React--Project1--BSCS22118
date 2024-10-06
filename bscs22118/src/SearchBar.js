@@ -1,60 +1,55 @@
-// src/components/SearchBar.js
 import React, { useState } from 'react';
 
 const SearchBar = () => {
-  const [location, setLocation] = useState("");
+  const [searchTerm, setSearchTerm] = useState(''); // State for search input
 
-  const handleSearch = () => {
-    // Handle the search action
-    console.log(`Searching for location: ${location}`);
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value); // Update search term on input change
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault(); // Prevent form submission
+    alert('Searching for: ' + searchTerm); // Display search term for demonstration
+    setSearchTerm(''); // Clear the search input after submission
   };
 
   return (
-    <div style={styles.searchBarContainer}>
+    <form onSubmit={handleSearchSubmit} style={styles.searchForm}>
       <input
         type="text"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-        placeholder="Where are you going?"
-        style={styles.inputField}
+        value={searchTerm}
+        onChange={handleSearchChange}
+        placeholder="Search for places..."
+        style={styles.searchInput}
       />
-      <button onClick={handleSearch} style={styles.searchButton}>
+      <button type="submit" style={styles.searchButton}>
         Search
       </button>
-    </div>
+    </form>
   );
 };
 
 const styles = {
-  searchBarContainer: {
+  searchForm: {
     display: 'flex',
-    alignItems: 'center',
-    padding: '10px',
-    border: '1px solid #ddd',
-    borderRadius: '50px',
-    backgroundColor: 'white',
-    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-    width: '100%',
-    maxWidth: '600px',
-    margin: '20px auto',
+    justifyContent: 'center',
+    margin: '20px 0',
   },
-  inputField: {
-    flex: 1,
-    padding: '10px 15px',
-    border: 'none',
-    borderRadius: '50px',
-    outline: 'none',
-    fontSize: '16px',
+  searchInput: {
+    padding: '10px',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    marginRight: '10px',
+    width: '300px', // Adjust width for better visibility
   },
   searchButton: {
     padding: '10px 20px',
+    borderRadius: '5px',
     border: 'none',
-    borderRadius: '30px',
-    backgroundColor: '#ff5a5f',
+    backgroundColor: '#FF5A5F',
     color: 'white',
-    fontWeight: 'bold',
     cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
+    transition: 'background-color 0.3s',
   },
 };
 
