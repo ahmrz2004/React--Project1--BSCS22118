@@ -1,8 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
 import Navbar from './Navbar';
 import SearchBar from './SearchBar';
 import Categories from './Categories';
+import Footer from './Footer';
 import ListingCard from './ListingCard';
 
 function App() {
@@ -14,11 +13,11 @@ function App() {
        <ListingCard/>
        <ListingCard/>
        <ListingCard/>
-       <ListingCard/>
-       <ListingCard/>
-      
+
+       <Footer/>
        
-      </div>
+       
+    </div>
   );
 }
 
